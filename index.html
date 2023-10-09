@@ -9,24 +9,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 </head>
 <body>
-    <h1>My Recipe Box</h1>
-    <form id="recipe-form">
-        <label for="recipeName">Recipe Name:</label>
-        <input type="text" id="recipeName" required><br><br>
-        <label for="recipeInstructions">Instructions:</label>
-        <textarea id="recipeInstructions" required></textarea><br><br>
-        <button type="button" onclick="generatePDF()">Generate PDF</button>
-        <button type="button" onclick="exportRecipe()">Export Recipe</button>
-        <input type="file" id="importFile" onchange="importRecipe()">
-        <button type="submit">Add Recipe</button>
-    </form>
-    <div id="recipes">
-        <!-- Recipes will appear here -->
-    </div>
-    <div id="preview">
-        <h3>Preview</h3>
-        <h2 id="previewName"></h2>
-        <p id="previewInstructions"></p>
+    <h1>Recipe Card Collection</h1>
+    <div id="container">
+        <div id="input-section">
+            <form id="recipe-form">
+                <label for="recipeName">Recipe Name:</label>
+                <input type="text" id="recipeName" required><br><br>
+                <label for="recipeInstructions">Instructions:</label>
+                <textarea id="recipeInstructions" required></textarea><br><br>
+                <button type="button" onclick="generatePDF()">Generate PDF</button>
+                <button type="button" onclick="exportRecipe()">Export Recipe</button>
+                <input type="file" id="importFile" onchange="importRecipe()">
+                <button type="submit">Add Recipe</button>
+            </form>
+        </div>
+        <div id="preview-section">
+            <div id="preview">
+                <h3>Preview</h3>
+                <h2 id="previewName"></h2>
+                <p id="previewInstructions"></p>
+            </div>
+        </div>
     </div>
     <script src="assets/app.js"></script>
 </body>

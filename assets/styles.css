@@ -10,26 +10,29 @@ body {
 h1, h3 {
     color: #333;
 }
+#container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+}
+#input-section, #preview-section {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 45%;
+}
 form {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 label, input, textarea, button {
     margin-bottom: 10px;
 }
-#recipes, #preview {
+#preview {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #eee;
-    padding: 20px;
-    margin: 20px;
-    border: 1px solid #ccc;
-    width: 300px;
-}
-.recipe {
-    background-color: #fff;
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid #ddd;
-    width: 300px;
 }
