@@ -1,3 +1,35 @@
-p{
-    color: dimgrey;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1, h3 {
+    color: #333;
+}
+form {
+    margin-bottom: 20px;
+}
+label, input, textarea, button {
+    margin-bottom: 10px;
+}
+#recipes, #preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eee;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    width: 300px;
+}
+.recipe {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    width: 300px;
 }

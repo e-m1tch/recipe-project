@@ -3,13 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="assets/styles.css">
+    <title>My Recipe Box</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 </head>
 <body>
-    <p>
-     Summer   
-    </p>
+    <h1>My Recipe Box</h1>
+    <form id="recipe-form">
+        <label for="recipeName">Recipe Name:</label>
+        <input type="text" id="recipeName" required><br><br>
+        <label for="recipeInstructions">Instructions:</label>
+        <textarea id="recipeInstructions" required></textarea><br><br>
+        <button type="button" onclick="generatePDF()">Generate PDF</button>
+        <button type="button" onclick="exportRecipe()">Export Recipe</button>
+        <input type="file" id="importFile" onchange="importRecipe()">
+        <button type="submit">Add Recipe</button>
+    </form>
+    <div id="recipes">
+        <!-- Recipes will appear here -->
+    </div>
+    <div id="preview">
+        <h3>Preview</h3>
+        <h2 id="previewName"></h2>
+        <p id="previewInstructions"></p>
+    </div>
     <script src="assets/app.js"></script>
 </body>
 </html>
